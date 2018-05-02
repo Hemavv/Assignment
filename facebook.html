@@ -1,0 +1,100 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="facebook.css">
+    <script>
+        var expanded = false;
+
+        function check() {
+            var checkbox = document.getElementById("checkboxes")
+            if (!expanded) {
+                checkboxes.style.display = "block";
+
+            } else {
+                checkboxes.style.display = "none";
+                expanded = false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <div class="header">
+            <p>facebook</p>
+
+        </div>
+        <div class="row">
+            <div class="side">
+                <br><br>
+                <h2>Facebook helps you connect and share with the<br> people in your life</h2>
+                <img src="face.png" style="height:200px;justify-content:flex-end;align-items: flex-end;margin-left:20%">
+            </div>
+            <div class="main">
+                <h2>Form</h2>
+                <h4>Its free and always will be!</h4><br>
+                <p>
+                    <input type="text" required name="text" placeholder="First Name" id="n1" maxlength="25" style="height:5%;border-radius: 10%;font-size: 20px;">*
+
+                    <input type="text" required name="text" id="n2" maxlength="25" placeholder="Last Name" style="height:5%;border-radius: 10%;font-size: 20px;">*
+                </p><br>
+                <p>
+                    <label for=" d1 " style="font-size: 20px;">DOB:</label>
+                    <input type="date" id="d1" step="1" required max="1997-12-31" class="i1">*
+                </p><br>
+                <p>
+                    <label for="a1 " style="font-size: 20px;">Age:</label>
+                    <input type="number" id="a1" min="21" max="100" step="1" required class="i2">
+                </p><br>
+                <p>
+                    <label style="font-size: 20px;">Life Goals:</label>
+                    <textarea maxlength="150" required class="i1"></textarea>*
+                </p>
+                <p>
+                    <label for="h1" style="font-size: 20px;">Hobbies      :</label>
+                    <input type="text " required id="h1 " list="l2 " class="i2">*
+                    <datalist id="l2 ">
+            <option>Dancing</option>
+            <option>Singing</option>
+            <option>Drawing</option>
+            <option>Painting</option>
+            <option>Watching Movie</option>
+            <option>Collecting money</option>
+            <option>Playing</option>
+            <option>Choreographing</option>
+        </datalist>
+                </p>
+                <fieldset>
+                    <legend>Salutation</legend>
+                    <input type="radio" id="r1" name="text" value="Mr" required><label for="r1">Mr</label>
+                    <input type="radio" id="r2" name="text" value="Ms" required><label for="r2">Ms</label>
+                </fieldset><br>
+                <p>
+                    <label style="font-size: 20px;">Favorite Music:</label>
+                    <div style="width:100px ">
+                        <div style="position: relative; " onclick="check() " required>
+                            <select style="width:150px; ">
+                            <option >Select Fav Music</option>*
+                        </select>
+                            <div style="position: absolute;left: 0;right: 0;top:0;bottom :0 "></div>
+                        </div>
+                        <div id="checkboxes" style="display: none;border:1px solid rgb(172, 168, 168);border-top:none; ">
+                            <label for="m1" style="display: block;"><input type="checkbox"id="m1" checked>Rock</label>
+                            <label for="m2" style="display: block;"><input type="checkbox"id="m2">Pop</label>
+                            <label for="m3" style="display: block;"><input type="checkbox"id="m3">Classical</label>
+                            <label for="m4" style="display: block;"><input type="checkbox"id="m4">Jazz</label>
+                        </div>
+                    </div>
+                </p>
+                <br>
+                <button onclick="myfun()" class="button">SUBMIT</button>
+    </form>
+
+    </div>
+
+    </div>
+    </div>
+</body>
+
+</html>
